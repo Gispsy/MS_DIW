@@ -1,0 +1,32 @@
+concat	Réunit deux tableaux.
+Exemple :
+var fruits = ["pomme", "poire", "banane", "fraise", "abricot"];
+var autres = ["sucre", "farine", "oeufs"];
+var ingredients = fruits.concat(autres);
+indexOf	Retourne le premier indice pour lequel on trouve l’élément dans un ta-bleau (occurrence) :
+fruits.indexOf('banane') => retourne 2
+lastIndexOf	Retourne le dernier indice de l’occurrence de l’élément dans un tableau :
+var fruits = ["pomme", "poire", "banane", "fraise", "banane", "abricot"];
+fruits.lastIndexOf("banane"); => retourne 4 (position du dernier banane, celui en rouge)
+pop	supprime le dernier élément d'un tableau et retourne cet élément. Cette méthode modifie la longueur du tableau :
+last = fruits.pop();
+console.log(last) => retourne ‘abricot’ et le supprime du tableau
+push	ajoute un ou plusieurs éléments à la fin d’un tableau et retourne la nouvelle taille du tableau.
+var nb = fruits.push('mangue', 'prune');
+
+Le nouveau tableau sera le suivant :
+
+fruits = ["pomme", "poire", "banane", "fraise", "abricot", 'mangue', 'prune'];
+
+et la variable nb vaudra 7.
+shift	Retourne le 1er élément d’un tableau et le supprime.
+fruits.shift(); => retourne ‘pomme’
+sort	Tri le tableau en ordre ascendant :
+fruits.sort(); => retourne abricot, banane, fraise, poire, pomme
+split	Découpe une chaîne selon un caractère passé en argument, le résultat de cette « découpe » sera un tableau :
+
+Exemple :
+var ladate = '15/05/2018';
+var myTableau = ladate.split('/');
+
+Le tableau myTableau contiendra les valeurs 15, 05 et 2018.

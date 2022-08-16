@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Page Contacts</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrin-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="CSS/css_jarditou.css">
+	</head>
+	<body>
+		<header>
+			<div class="TL">
+				<img src="Logo/jarditou_logo.jpg" height="100" width="400" alt="Logo">
+				<div class="PH">
+					<p>Tout le jardin</p><!--le titre a revoir-->
+				</div>
+			</div>
+		</header>
+		<nav class="nav">
+				<ul>
+					<li><a href="Index.html">Accueil</a></li>
+					<li><a href="Utilitaire.html">Tableau</a></li>	
+					<li><a href="Contact.html">Contact</a></li>
+				</ul>
+		</nav>
+		<p><img class="Promo"src="Logo/promotion.jpg" alt="Promo"></p>
+			<div class="tout">
+				<article class="colo">
+				<h2>Contact</h2>
+				<hr>
+				<p>*Ces zones sont obligatoires</p>
+				<form action="http://bienvu.net/script.php" method="GET">
+				<fieldset class="contac">
+					<legend>Vos coordonnées</legend>
+						<label for="nom">Votre Nom*:</label><input type="text" name="nom" id="nom"><br>
+						<label for="prenom">Votre prénom*:</label><input type="text" name="prenom" id="prenom"><br>
+						<span> Sexe*:</span>
+						<input type="radio" name="sexe" value="Homme">Homme
+						<input type="radio" name="sexe" value="Femme">Femme<br>
+						<label for="date">Date de naissance*:</label><input type="date" name="ddn" id="date"><br>
+						<label for="CodePostal">Code postal*:</label><input type="text" name="CodePostale" id="CodePostal"><br>
+						<label for="Adress">Adress*:</label><input type="text" name="Adress" id="Adress"><br>
+						<label for="Ville"> Ville*:</label><input type="text" name="Ville" id="Ville"><br>
+						<label for="Email">Email*:</label><input type="text" name="Email" id="Email" placeholder="dave.loper@afpa.fr"><br>
+				</fieldset>
+				<br>
+				<fieldset>
+					<legend>Votre demande</legend>
+						<span>Sujet*:</span>
+						<select id="couleur">
+							<option value="" selected>Veuillez séléctionner un sujet</option>
+							<option value="Utilitaire">Mes commandes</option>
+							<option value="Ventes produits">Question sur un produits</option>
+							<option value="Histoires du magasins">Réclamation</option>
+							<option value="Autres">Autres</option>
+						</select><br>
+						<label for="questionaposer">Question à poser*:</label><textarea name="questionaposer" rows="1" cols="10" id="questionaposer"></textarea>
+				</fieldset>
+						<input type="checkbox" name="*J'accepte le traitement information de ce formulaire">*J'accepte le traitement information de ce formulaire<br>
+						<br>
+						<input type="submit" name="Envoyer">
+						<input type="reset" name="Annuler">
+				</form>
+				<br>
+			</article>
+				<div class="pilo">
+						[COLONNE DROITE]
+				</div>
+			</div>
+			<footer>
+				<ul>
+					<li><a href=Mention_légales.html>Mention légales</a></li>
+					<li><a href="Horaire.html">Horaires</a></li>
+					<li><a href=#>Plan du site</a></li>
+				</ul>
+			</footer>
+		<script src="JS/script_test.js"></script>
+	</body>
+</html>

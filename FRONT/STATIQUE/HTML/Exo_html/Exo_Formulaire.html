@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Page 2 exos</title>
+	</head>
+	<body>
+        <label for="nom">Nom:</label><input type="text" name="nom" id="nom" size="13" maxlength="13" placeholder="Exemple: Ducamp">
+
+		<fieldset>
+			<legend>Coordonnées</legend>
+			<label for="nom">Nom:</label><input type="text" name="nom" id="?"><br>
+			<label for="?">Email:</label><input type="email"><br>
+			<label for="date">DAte de naissance:</label><input type="date" name="ddn" id="date">
+		</fieldset>
+
+
+		<form action="http://bienvu.net/script.php" method="GET">
+			<fieldset>
+				<legend>Vos coordonnées</legend>
+					<label for="nom">Votre Nom*:</label><input type=" text" name="nom" id="?"><br>
+					<label for="prénom">Votre prénom*:</label><input type="text" name="prénom"><br>
+					<label for="sexe"> Sexe*:</label><input type="radio" name="Homme" value="Homme">Homme<input type="radio" name="Femme" value="Femme">Femme<br>
+					<label for="Date de naissance">Date de naissance*:</label><input type="date" name="ddn" id="date"><br>
+					<label for="Code Postal">Code postal*:</label><input type="text" name="Code postale" id="code postale"><br>
+					<label for="Adress">Adress*:</label><input type="text" name="Adress" id="Adress"><br>
+					<label for="Ville"> Ville*:</label><input type="text" name="Ville" id="Ville"><br>
+					<label for="Email">Email*:</label><input type="text" name="Email" id="Email" placeholder="dave.loper@afpa.fr"><br>
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>Votre demande</legend>
+					<label for="Sujet">Sujet*:</label>
+					<select id="couleur">
+						<option value="" selected>Veuillez séléctionner un sujet</option>
+						<option value="Utilitaire">Mes commandes</option>
+						<option value="Ventes produits">Question sur un produits</option>
+						<option value="Histoires du magasins">Réclamation</option>
+						<option value="Autres">Autres</option>
+					</select><br>
+					<label for="Question à poser">Question à poser*:</label><textarea name="question" rows="1" cols="10"></textarea>
+			</fieldset>
+					<input type="checkbox" name="*J'accepte le traitement information de ce formulaire">*J'accepte le traitement information de ce formulaire
+        </form>
+    </body>

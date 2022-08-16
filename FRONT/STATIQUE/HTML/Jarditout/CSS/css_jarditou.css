@@ -1,0 +1,128 @@
+@media screen and (max-width: 768px)
+{
+
+	html
+	{
+		font-size:  100%;
+	}
+	li
+	{
+		display: inline-block;
+	}
+	.TL
+	{
+		flex-wrap: wrap;
+		display: flex;
+		justify-content: space-between;
+	}
+	.PH
+	{
+		border: 50px;
+		font-size: 35px;
+		width: 50%;
+	}
+	.Promo
+	{
+		width: 100%;
+		height: auto;
+	}
+	.tout
+	{
+		display: flex;
+		justify-content: space-between;
+	}
+	.colo
+	{
+		height: auto;
+		width: 100%;
+	}
+	.pilo
+	{
+		border: 25px solid grey;
+		background-color: grey;
+		width: 50%;
+		display: none;
+	}
+	.contac
+	{
+	height: auto;
+	width: 100%;
+	}
+	footer
+	{
+		border:  solid black;
+		background: black;
+	}
+
+}
+
+.nav
+{
+border:  solid black;
+background: black;
+}
+
+a
+{
+color:  white;
+}
+
+li
+{
+display: inline-block;
+}
+
+.TL
+{
+flex-wrap: wrap;
+display: flex;
+justify-content: space-between;
+}
+
+.Logo
+{
+	display: block;
+}
+
+.PH
+{
+border: 50px;
+font-size: 35px;
+width: 50%;
+}
+
+.Promo
+{
+width: 100%;
+height: auto;
+}
+
+.tout
+{
+display: flex;
+justify-content: space-between;
+}
+
+.pilo
+{
+border: 25px solid grey;
+background-color: grey;
+width: 50%;
+}
+
+.contac
+{
+	height: auto;
+	width: 75%;
+}
+
+footer
+{
+border:  solid black;
+background: black;
+}
+
+.colo
+{
+	width: 50%;
+}
