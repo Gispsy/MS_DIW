@@ -5,75 +5,93 @@
 		<title>Page Contacts</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrin-to-fit=no">
-		<link rel="stylesheet" type="text/css" href="CSS/css_jarditou.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	</head>
 	<body>
-		<header>
-			<div class="TL">
-				<img src="Logo/jarditou_logo.jpg" height="100" width="400" alt="Logo">
-				<div class="PH">
-					<p>Tout le jardin</p><!--le titre a revoir-->
+		<div class="containeur-fluid mx-auto>
+			<div class ="row col-xl-8 col-12 col-sm-12 col-md-12 col-lg-12">
+			<header>
+				<div class="TL">
+					<img src="Logo/jarditou_logo.jpg" height="100" width="400" alt="Logo">
+					<div class="PH">
+						<p>Tout le jardin</p><!--le titre a revoir-->
+					</div>
 				</div>
-			</div>
-		</header>
-		<nav class="nav">
-				<ul>
-					<li><a href="Index.html">Accueil</a></li>
-					<li><a href="Utilitaire.html">Tableau</a></li>	
-					<li><a href="Contact.html">Contact</a></li>
-				</ul>
-		</nav>
-		<p><img class="Promo"src="Logo/promotion.jpg" alt="Promo"></p>
-			<div class="tout">
-				<article class="colo">
-				<h2>Contact</h2>
-				<hr>
-				<p>*Ces zones sont obligatoires</p>
-				<form action="http://bienvu.net/script.php" method="GET">
-				<fieldset class="contac">
-					<legend>Vos coordonnées</legend>
-						<label for="nom">Votre Nom*:</label><input type="text" name="nom" id="nom"><br>
-						<label for="prenom">Votre prénom*:</label><input type="text" name="prenom" id="prenom"><br>
-						<span> Sexe*:</span>
-						<input type="radio" name="sexe" value="Homme">Homme
-						<input type="radio" name="sexe" value="Femme">Femme<br>
-						<label for="date">Date de naissance*:</label><input type="date" name="ddn" id="date"><br>
-						<label for="CodePostal">Code postal*:</label><input type="text" name="CodePostale" id="CodePostal"><br>
-						<label for="Adress">Adress*:</label><input type="text" name="Adress" id="Adress"><br>
-						<label for="Ville"> Ville*:</label><input type="text" name="Ville" id="Ville"><br>
-						<label for="Email">Email*:</label><input type="text" name="Email" id="Email" placeholder="dave.loper@afpa.fr"><br>
-				</fieldset>
-				<br>
-				<fieldset>
-					<legend>Votre demande</legend>
-						<span>Sujet*:</span>
-						<select id="couleur">
-							<option value="" selected>Veuillez séléctionner un sujet</option>
-							<option value="Utilitaire">Mes commandes</option>
-							<option value="Ventes produits">Question sur un produits</option>
-							<option value="Histoires du magasins">Réclamation</option>
-							<option value="Autres">Autres</option>
-						</select><br>
-						<label for="questionaposer">Question à poser*:</label><textarea name="questionaposer" rows="1" cols="10" id="questionaposer"></textarea>
-				</fieldset>
-						<input type="checkbox" name="*J'accepte le traitement information de ce formulaire">*J'accepte le traitement information de ce formulaire<br>
-						<br>
-						<input type="submit" name="Envoyer">
-						<input type="reset" name="Annuler">
-				</form>
-				<br>
-			</article>
-				<div class="pilo">
-						[COLONNE DROITE]
+			</header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand" href="#">Jarditou.com</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link"href="Index.html">Accueil</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="Utilitaire.html">Tableau</a>
+						</li>	
+						<li class="nav-item">
+							<a class="nav-link disabled" href="Contact.html" tabindex="-1" aria-disabled="true">Contact</a>
+						</li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0" aria-labelledby="navbarDropdown">
+						<input class="form-control mr-sm-2" type="search" placeholder="Promouvoir" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">rechercher</button>
+					</form>
+			</nav>
+			<p><img src="Logo/promotion.jpg" alt="Responsive image"></p>
+				<div class="tout">
+					<article class="colo">
+					<h2>Contact</h2>
+					<hr>
+					<p>*Ces zones sont obligatoires</p>
+					<form action="http://bienvu.net/script.php" method="GET">
+					<fieldset class="contac">
+						<legend>Vos coordonnées</legend>
+							<label for="nom">Votre Nom*:</label><input type="text" name="nom" id="nom"><br>
+							<label for="prenom">Votre prénom*:</label><input type="text" name="prenom" id="prenom"><br>
+							<span> Sexe*:</span>
+							<input type="radio" name="sexe" value="Homme">Homme
+							<input type="radio" name="sexe" value="Femme">Femme<br>
+							<label for="date">Date de naissance*:</label><input type="date" name="ddn" id="date"><br>
+							<label for="CodePostal">Code postal*:</label><input type="text" name="CodePostale" id="CodePostal"><br>
+							<label for="Adress">Adress*:</label><input type="text" name="Adress" id="Adress"><br>
+							<label for="Ville"> Ville*:</label><input type="text" name="Ville" id="Ville"><br>
+							<label for="Email">Email*:</label><input type="text" name="Email" id="Email" placeholder="dave.loper@afpa.fr"><br>
+					</fieldset>
+					<br>
+					<fieldset>
+						<legend>Votre demande</legend>
+							<span>Sujet*:</span>
+							<select id="couleur">
+								<option value="" selected>Veuillez séléctionner un sujet</option>
+								<option value="Utilitaire">Mes commandes</option>
+								<option value="Ventes produits">Question sur un produits</option>
+								<option value="Histoires du magasins">Réclamation</option>
+								<option value="Autres">Autres</option>
+							</select><br>
+							<label for="questionaposer">Question à poser*:</label><textarea name="questionaposer" rows="1" cols="10" id="questionaposer"></textarea>
+					</fieldset>
+							<input type="checkbox" name="*J'accepte le traitement information de ce formulaire">*J'accepte le traitement information de ce formulaire<br>
+							<br>
+							<input type="submit" name="Envoyer">
+							<input type="reset" name="Annuler">
+					</form>
+					<br>
+				</article>
 				</div>
-			</div>
-			<footer>
-				<ul>
-					<li><a href=Mention_légales.html>Mention légales</a></li>
-					<li><a href="Horaire.html">Horaires</a></li>
-					<li><a href=#>Plan du site</a></li>
-				</ul>
-			</footer>
-		<script src="JS/script_test.js"></script>
+					<div class="pilo">
+							[COLONNE DROITE]
+					</div>
+				</div>
+				<footer>
+					<ul>
+						<li><a href=Mention_légales.html>Mention légales</a></li>
+						<li><a href="Horaire.html">Horaires</a></li>
+						<li><a href=#>Plan du site</a></li>
+					</ul>
+				</footer>
+		</div>
+	<script src="JS/script_test.js"></script>
 	</body>
 </html>
