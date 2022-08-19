@@ -8,61 +8,117 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	</head>
 	<body>
-		<div class="containeur-fluid mx-auto>
-			<div class ="row col-xl-8 col-12 col-sm-12 col-md-12 col-lg-12">
-			<header>
-				<div class="TL">
-					<img src="Logo/jarditou_logo.jpg" height="100" width="400" alt="Logo">
-					<div class="PH">
-						<p>Tout le jardin</p><!--le titre a revoir-->
+		<div class="containeur-fluid">
+				<!--Tête d'affiche-->
+				<header>
+					<div class="row">
+						<img class="img-fluid d-none d-sm-block col-sm-4 col-md-4 col-lg-3 col-xl-3 pl-0" src="Logo/jarditou_logo.jpg" alt="logo">
+							<p class="d-none d-sm-block col-sm-6 col-md-6 col-lg-3 col-xl-3 pl-0 display-2 h1 text-right offset-6">Tout le jardin</p>
 					</div>
+				</header>
+				<!--Fin Tête d'affiche-->
+
+				<!--Début de la barre de Navigation-->
+				<div class="row">
+					<nav class="navbar navbar-expand-lg navbar-light bg-light">
+						<a class="navbar-brand" href="#">Jarditou.com</a>
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+		
+		
+						<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+							<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+								<li class="nav-item">
+									<a class="nav-link" href="Index.html">Accueil</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="Utilitaire.html">Tableau</a>
+								</li>	
+								<li class="nav-item">
+									<a class="nav-link" href="Contact.html">Contact</a>
+								</li>
+							</ul>
+							<div class="col-7"></div>
+							<form class="form-inline my-2 my-lg-0">
+								<input class="form-control mr-sm-2" type="search" placeholder="Promouvoir" aria-label="Search">
+								<button class="btn btn-outline-success my-2 my-sm-0" type="submit">rechercher</button>
+							</form>
+						</div>
+					</nav>
 				</div>
-			</header>
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<a class="navbar-brand" href="#">Jarditou.com</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item active">
-							<a class="nav-link"href="Index.html">Accueil</a>
-						</li>
-						<li class="nav-item active">
-							<a class="nav-link" href="Utilitaire.html">Tableau</a>
-						</li>	
-						<li class="nav-item">
-							<a class="nav-link disabled" href="Contact.html" tabindex="-1" aria-disabled="true">Contact</a>
-						</li>
-					</ul>
-					<form class="form-inline my-2 my-lg-0" aria-labelledby="navbarDropdown">
-						<input class="form-control mr-sm-2" type="search" placeholder="Promouvoir" aria-label="Search">
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">rechercher</button>
-					</form>
-			</nav>
-			<p><img src="Logo/promotion.jpg" alt="Responsive image"></p>
-				<div class="tout">
+				<!--Fin de barre de Navigation-->
+
+				<!--Contact Formulaire-->
+			<img class="img-fluid col-12 overflow-auto" src="Logo/promotion.jpg" alt="Responsive image">
+			<br>
+			<br>
+				<div class="layout">
 					<article class="colo">
-					<h2>Contact</h2>
-					<hr>
-					<p>*Ces zones sont obligatoires</p>
+					<p class="display-8">*Ces zones sont obligatoires</p>
 					<form action="http://bienvu.net/script.php" method="GET">
 					<fieldset class="contac">
-						<legend>Vos coordonnées</legend>
-							<label for="nom">Votre Nom*:</label><input type="text" name="nom" id="nom"><br>
-							<label for="prenom">Votre prénom*:</label><input type="text" name="prenom" id="prenom"><br>
-							<span> Sexe*:</span>
-							<input type="radio" name="sexe" value="Homme">Homme
-							<input type="radio" name="sexe" value="Femme">Femme<br>
-							<label for="date">Date de naissance*:</label><input type="date" name="ddn" id="date"><br>
-							<label for="CodePostal">Code postal*:</label><input type="text" name="CodePostale" id="CodePostal"><br>
-							<label for="Adress">Adress*:</label><input type="text" name="Adress" id="Adress"><br>
-							<label for="Ville"> Ville*:</label><input type="text" name="Ville" id="Ville"><br>
-							<label for="Email">Email*:</label><input type="text" name="Email" id="Email" placeholder="dave.loper@afpa.fr"><br>
+						<legend class="h1">Vos coordonnées</legend>
+
+						<!--F_Nom-->
+						<div class="form-groupe">
+							<label for="nom">Votre Nom*:</label>
+							<input type="text" class="form-control" name="nom" id="nom"><br>
+						</div>
+
+						<!--F_Prenom-->
+						<div class="form-groupe">
+							<label for="prenom">Votre prénom*:</label>
+							<input type="text" class="form-control" name="prenom" id="prenom"><br>
+						</div>
+
+						<!--F_sexe-->
+						<div class="form-groupe">
+							<span> Sexe*</span>
+						</div>
+						<br>
+						<div class="form-check form-check-inline">
+							<input type="radio" class="form-check-input" name="sexe" id="inlineRadio1" value="Homme">Homme
+						</div>
+							<input type="radio" class="form-check-input" name="sexe" value="Femme">Femme<br>
+							<br>
+
+						<!--F_Date de naissance-->
+						<div class="form-groupe">
+							<label for="date">Date de naissance*:</label>
+							<input type="date" class="form-control" name="ddn" id="date"><br>
+						</div>
+
+						<!--F-Code postale-->
+						<div class="form-groupe">
+							<label for="CodePostal">Code postal*:</label>
+							<input type="text" class="form-control" name="CodePostale" id="CodePostal"><br>
+						</div>
+
+						<!--F_Adresse-->
+						<div class="form-groupe">
+							<label for="Adress">Adress*:</label>
+							<input type="text" name="Adress" class="form-control" id="Adress"><br>
+						</div>
+
+						<!--F_Ville-->
+						<div class="form-groupe">
+							<label for="Ville"> Ville*:</label>
+							<input type="text" class="form-control" name="Ville" id="Ville"><br>
+						</div>
+
+						<!--F_Email-->
+						<div class="form-groupe">
+							<label for="Email">Email*:</label>
+							<input type="email" class="form-control" name="Email" id="email" placeholder="dave.loper@afpa.fr">
+							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						</div>
+
 					</fieldset>
 					<br>
 					<fieldset>
-						<legend>Votre demande</legend>
-							<span>Sujet*:</span>
+						<legend class="h1">Votre demande</legend>
+							<span>Sujet</span>
 							<select id="couleur">
 								<option value="" selected>Veuillez séléctionner un sujet</option>
 								<option value="Utilitaire">Mes commandes</option>
@@ -78,20 +134,36 @@
 							<input type="reset" name="Annuler">
 					</form>
 					<br>
-				</article>
+					</article>
 				</div>
-					<div class="pilo">
-							[COLONNE DROITE]
-					</div>
+			</div>
+			<!--Fin Contact Formulaire-->
+
+
+				<!--Barre de mention-->
+				<div class="row">
+					<footer class="navbar navbar-expand-lg navbar-dark bg-dark">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						  </button>
+						  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">							
+							<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+								<li class="nav-item">
+									<a class="nav-link" href="Mention_légales.html">Mention légales</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="Horaire.html">Horaires</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href=# >Plan du site</a>
+								</li>
+							</ul>
+					</footer>
 				</div>
-				<footer>
-					<ul>
-						<li><a href=Mention_légales.html>Mention légales</a></li>
-						<li><a href="Horaire.html">Horaires</a></li>
-						<li><a href=#>Plan du site</a></li>
-					</ul>
-				</footer>
+				<!--Fin barre de mention-->
 		</div>
-	<script src="JS/script_test.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</body>
 </html>
