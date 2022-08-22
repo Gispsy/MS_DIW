@@ -118,20 +118,22 @@
 					<br>
 					<fieldset>
 						<legend class="h1">Votre demande</legend>
-							<span>Sujet</span>
-							<select id="couleur">
+							<label for="exampleFormControlInput1">Sujet </label>
+							<select id="exampleFormControlSelect1" class="form-control">
 								<option value="" selected>Veuillez séléctionner un sujet</option>
 								<option value="Utilitaire">Mes commandes</option>
 								<option value="Ventes produits">Question sur un produits</option>
 								<option value="Histoires du magasins">Réclamation</option>
 								<option value="Autres">Autres</option>
 							</select><br>
-							<label for="questionaposer">Question à poser*:</label><textarea name="questionaposer" rows="1" cols="10" id="questionaposer"></textarea>
+							<label for="exampleFormControlTextarea1">Question à poser*:</label>
+							<textarea name="questionaposer" rows="3" id="exampleFormControlTextarea1" class="form-control"></textarea>
 					</fieldset>
-							<input type="checkbox" name="*J'accepte le traitement information de ce formulaire">*J'accepte le traitement information de ce formulaire<br>
+							<input type="checkbox" class="form-check-input" id="exampleCheck1" name="checkbox">
+							<label class="form-check-label" for="exampleCheck1">*J'accepte le traitement information de ce formulaire</label>
 							<br>
-							<input type="submit" name="Envoyer">
-							<input type="reset" name="Annuler">
+							<button type="submit" class="btn btn-dark">Envoyer</button>
+							<button type="reset" class="btn btn-dark">Rénitialiser</button>
 					</form>
 					<br>
 					</article>
