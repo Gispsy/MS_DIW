@@ -32,31 +32,31 @@
 				<form action="http://bienvu.net/script.php" method="GET" id="Form">
 				<fieldset class="contac">
 					<legend>Vos coordonnées</legend>
-						 <label for="nom">Votre Nom*:</label>	<input type="text" name="nom" id="nom"><br>				<!--Js fais -->
-						<label for="prenom">Votre prénom*:</label>	<input type="text" name="prenom" id="prenom"><br>
-						<span> Sexe*:</span>
-						<input type="radio" name="sexe" value="Homme">Homme
-						<input type="radio" name="sexe" value="Femme">Femme<br>
-						<label for="date">Date de naissance*:</label>	<input type="date" name="ddn" id="date"><br>
-						<label for="CodePostal">Code postal*:</label>	<input type="text" name="CodePostale" id="CodePostal"><br>
-						<label for="Adress">Adress*:</label>	<input type="text" name="Adress" id="Adress"><br>
-						<label for="Ville"> Ville*:</label>	<input type="text" name="Ville" id="Ville"><br>
-						<label for="Email">Email*:</label>	<input type="text" name="Email" id="Email" placeholder="dave.loper@afpa.fr"><br>
+						 <label for="nom">Votre Nom*:</label>	<input type="text" name="nom" id="nom"><br>	<div id="1"></div>			<!--Js fais -->
+						<label for="prenom">Votre prénom*:</label>	<input type="text" name="prenom" id="prenom"><br><div id="2"></div>	<!--JS fais-->
+						<span> Sexe*:</span>																			<!--JS fais-->
+						<input type="radio" name="sexe" id="H" value="Homme">Homme
+						<input type="radio" name="sexe" id="F" value="Femme">Femme<br><div id="3"></div>
+						<label for="date">Date de naissance*:</label>	<input type="date" name="ddn" id="date"><br><div id="4"></div>	<!--JS fais-->
+						<label for="CodePostal">Code postal*:</label>	<input type="text" name="CodePostale" id="CodePostal"><div id="5"></div><br>	<!--JS fais-->
+						<label for="Adress">Adress*:</label>	<input type="text" name="Adress" id="Adress"><br><div id="6"></div>		<!--JS fais-->
+						<label for="Ville"> Ville*:</label>	<input type="text" name="Ville" id="Ville"><br><div id="7"></div>				<!--JS fais-->
+						<label for="Email">Email*:</label>	<input type="text" name="Email" id="Email" placeholder="dave.loper@afpa.fr"><br><div id="8"></div>	<!--JS fais-->
 				</fieldset>
 				<br>
 				<fieldset>
 					<legend>Votre demande</legend>
 						<span>Sujet*:</span>
-						<select id="couleur">
-							<option value="" selected>Veuillez séléctionner un sujet</option>
-							<option value="Utilitaire">Mes commandes</option>
-							<option value="Ventes produits">Question sur un produits</option>
-							<option value="Histoires du magasins">Réclamation</option>
-							<option value="Autres">Autres</option>
-						</select><br>
-						<label for="questionaposer">Question à poser*:</label><textarea name="questionaposer" rows="1" cols="10" id="questionaposer"></textarea>
+						<select id="couleur">																			<!--JS fais-->
+							<option value= "" id = "null"> Veuillez séléctionner un sujet </option>
+							<option value="Utilitaire"> Mes commandes </option>
+							<option value="Ventes produits"> Question sur un produits </option>
+							<option value="Histoires du magasins"> Réclamation </option>
+							<option value="Autres"> Autres </option>
+						</select><div id="9"></div><br>
+						<label for="questionaposer">Question à poser*:</label><textarea name="questionaposer" rows="1" cols="10" id="questionaposer"></textarea><div id="11"></div>
 				</fieldset>
-						<input type="checkbox" name="*J'accepte le traitement information de ce formulaire">*J'accepte le traitement information de ce formulaire<br>
+						<input type="checkbox" id ="check" name="*J'accepte le traitement information de ce formulaire">*J'accepte le traitement information de ce formulaire<div id='10'></div><br>	<!--JS fais-->
 						<br>
 						<input type="submit" name="Envoyer" id="Envoyer">
 						<input type="reset" name="Annuler">
