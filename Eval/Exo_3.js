@@ -2,7 +2,7 @@
  console.log(tab);
  tab.join(",");
 
-
+function Exo_3(){
  for (let i=0; i <= tab.length; i--){                   //Boucle pour entrer tout les prénoms 
  let p = window.prompt("Entrer un prénom");             //Entrer le nom avec majuscule
      if(tab.indexOf(p)!== -1){                          //Condition de la selection des prénoms
@@ -23,6 +23,7 @@
  
  };
  document.write ("Il reste dans le tableau " + tab);
+}
 
 
 

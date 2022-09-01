@@ -27,25 +27,27 @@ let egale = 0;
 let cpt =0;
 let valeur = 0;
 
-while (valeur <=100){
-valeur = window.prompt("entrer un age XD");
+function Exo1(){
 
-    if(valeur<=20){
-        moins++;
-        console.log(moins);
-    }else if(valeur<=40){
-        plus++;
-        console.log(plus);
-    }else{
-        egale++;
-        console.log(egale);
+ while (valeur <=100){
+    valeur = window.prompt("entrer un age XD");
+
+        if(valeur<=20){
+            moins++;
+            console.log(moins);
+        }else if(valeur<=40){
+            plus++;
+            console.log(plus);
+        }else{
+            egale++;
+            console.log(egale);
+        }
     }
-}
 
 document.write ("il y a " + moins + " personne de moins de 20 ans. <br>");
 document.write ("il y a " + plus + " personne de moins de 40 ans. <br>");
 document.write ("il y a " + egale + " personne de moins de 100 ans. <br>");
 
-
-
+}
+Exo1;
 

@@ -5,18 +5,18 @@ let r = 0;       //Resultat de le multiplication
 
 
 function TableMultiplication(mult){
-
+    M = Number(window.prompt('Entrer votre Multiplicateur'));
+    
     for(i=0 ; i<=10 ; i++){ 
             console.log(mult);  
-            r=mult*i;
-            console.log(i + " X " + mult + " = " + r);
-            alert (i + " X " + mult + " = " + r);
+            r=M*i;
+            console.log(i + " X " + M + " = " + r);
+            alert (i + " X " + M + " = " + r);
         };
+
+
 }
-
-M = Number(window.prompt('Entrer votre Multiplicateur'));
-
-TableMultiplication(M);
+TableMultiplication;
 //console.log(r);
 //console.log(M);
 //console.log(M*i);
