@@ -82,7 +82,45 @@ JOIN hotel ON cha_hot_id = hot_id
 
 --13--
 
+SELECT hot_sta_id ,COUNT(hot_id)
+FROM hotel 
+JOIN station ON hot_sta_id = sta_id
+GROUP BY sta_id 
 
+--14--
 
+SELECT cha_hot_id,COUNT(cha_hot_id)
+FROM chambre 
+JOIN hotel ON cha_hot_id = hot_id 
+JOIN station ON hot_sta_id = sta_id 
+GROUP BY sta_id
 
+--15--
+
+SELECT cha_hot_id,cha_capacite,sta_id,COUNT(cha_capacite)
+FROM chambre 
+JOIN hotel ON cha_hot_id = hot_id 
+JOIN station ON hot_sta_id = sta_id 
+WHERE cha_capacite > 1
+GROUP BY sta_id 
+
+--16--
+
+SELECT cli_nom, res_cli_id,hot_nom
+FROM client 
+JOIN reservation ON cli_id = res_cli_id 
+JOIN chambre ON res_cha_id = cha_id
+JOIN hotel ON cha_hot_id = hot_id
+WHERE cli_nom = 'Squire'
+
+--17--
+
+SELECT res_date_debut,res_date_fin,AVG(DATEDIFF(res_date_fin,res_date_debut))
+FROM reservation 
+JOIN chambre ON res_cha_id = cha_id 
+JOIN hotel ON cha_hot_id = hot_id
+JOIN station ON hot_sta_id = sta_id
+GROUP BY sta_id
+
+---FIN---
 
