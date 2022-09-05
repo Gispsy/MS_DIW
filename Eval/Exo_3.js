@@ -1,17 +1,18 @@
- let tab = ["Audrey ","Aurélien ","Flavien ","Jérémy ","Melik ","Nouara ","Samuel ","Stéphane "];
+ let tab = ["Audrey","Aurélien","Flavien","Jérémy","Melik","Nouara","Samuel","Stéphane"];
  console.log(tab);
  tab.join(",");
 
 function Exo_3(){
+let p = window.prompt("Entrer un prénom"); 
  for (let i=0; i <= tab.length; i--){                   //Boucle pour entrer tout les prénoms 
- let p = window.prompt("Entrer un prénom");             //Entrer le nom avec majuscule
-     if(tab.indexOf(p)!== -1){                          //Condition de la selection des prénoms
-        
+             //Entrer le nom avec majuscule
+     if(tab.indexOf(p)!== -1){                          //Condition de la selection des prénoms    
          console.log(tab[p]);
          tab.splice(tab.indexOf(p),1);                  //Split qui va découper la chaine selon le caractére 
          tab.push("  ")                                 //Push un élément vide a la fin de la chaine
          console.log('Element found');
          console.log(tab);
+         break;
 
      }else{
 
@@ -23,6 +24,7 @@ function Exo_3(){
  
  };
  document.write ("Il reste dans le tableau " + tab);
+ alert ("GG tu la suprimer de la liste");
 }
 
 
