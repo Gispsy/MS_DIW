@@ -78,66 +78,66 @@
 // }
 
 
-//Exo 3
+// Exo 3
 
-// let ok=true;
-// let n;
-// let somme=0;
-// let compteur=0;
-// let div=0;
+let ok=true;
+let n;
+let somme=0;
+let compteur=0;
+let div=0;
 
-// while (ok){
-//         n=parseInt(window.prompt("Entrer une valeur"));
-//         compteur ++;
-//         somme = somme+n;
-//         if(n<=0){
-//                 ok=false;
-//                 console.log(somme);
-//                 }else{
-//                         continue;
-//                 }
-// } 
-// div=somme%compteur
-// alert('La sommme de tout vaut' +somme);
-// alert('la division du tout vaut ' +div);
-
-
-//Exo 4 
-
-let N;
-let X;
-let i;
-let R;
-
-N= window.prompt("Entrer Multiplicateur");
-X= window.prompt("Entrer Multiplier");
-for (i=N; i>=N; i++){
-        if(N*X){
-                R=N*X;
-                alert(N+"*"+X+"="+R);
-                N--
-        }else{
-                break;
-        }
-}
-//Exo 5
-
-let ok = true
-//on récupère le mot saisi qui vaut M
-let M= window.prompt("Entrer le mot que vous voulez");
-
- longueur_mot=M.length;
-
-alert("longueur du mot : "+longueur_mot);
-
-console.log(M.indexOf ('M')); 
-        M.substring (0);
-        M.indexOf ('M');
 while (ok){
-        if(M=="M"){
-        alert ("Il y a "+M+" voyelle(s)");
-        ok = false;
-        }else{
-                ok = false;
-        }
-}
+        n=parseInt(window.prompt("Entrer une valeur"));
+        compteur ++;
+        somme = somme+n;
+        if(n<=0){
+                ok=false;
+                console.log(somme);
+                }else{
+                        continue;
+                }
+} 
+div=somme%compteur
+alert('La sommme de tout vaut' +somme);
+alert('la division du tout vaut ' +div);
+
+
+// //Exo 4 
+
+// let N;
+// let X;
+// let i;
+// let R;
+
+// N= window.prompt("Entrer Multiplicateur");
+// X= window.prompt("Entrer Multiplier");
+// for (i=N; i>=N; i++){
+//         if(N*X){
+//                 R=N*X;
+//                 alert(N+"*"+X+"="+R);
+//                 N--
+//         }else{
+//                 break;
+//         }
+// }
+// //Exo 5
+
+// let ok = true
+// //on récupère le mot saisi qui vaut M
+// let M= window.prompt("Entrer le mot que vous voulez");
+
+//  longueur_mot=M.length;
+
+// alert("longueur du mot : "+longueur_mot);
+
+// console.log(M.indexOf ('M')); 
+//         M.substring (0);
+//         M.indexOf ('M');
+// while (ok){
+//         if(M=="M"){
+//         alert ("Il y a "+M+" voyelle(s)");
+//         ok = false;
+//         }else{
+//                 ok = false;
+//         }
+// }
