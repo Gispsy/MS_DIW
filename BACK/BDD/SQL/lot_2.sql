@@ -1,4 +1,4 @@
---Lot 2
+--Lot 2--
 
 --1--
 
@@ -194,5 +194,36 @@ WHERE qteann*0.9 > qtecde AND datcom LIKE ('%2020-12%')
 									OR datcom LIKE ('%2018-12%')
 GROUP BY libart
 
+--18.1--
+
+SELECT libart, qtecde, qteann, MONTH( datcom )
+FROM produit 
+JOIN ligcom ON ligcom.codart = produit.codart 
+JOIN entcom ON entcom.numcom = ligcom.numcom 
+WHERE qteann*0.9 > qtecde
+		AND MONTH(datcom) = 12
+GROUP BY libart;
+
+--18.2--
+
+SELECT libart, qtecde, qteann, MONTH( datcom )
+FROM produit 
+JOIN ligcom ON ligcom.codart = produit.codart 
+JOIN entcom ON entcom.numcom = ligcom.numcom 
+WHERE qteann*0.9 > qtecde
+		AND MONTH(datcom) LIKE ('%12%')
+				OR MONTH(datcom) LIKE ('%11%')
+				OR MONTH(datcom) LIKE ('%10%')
+GROUP BY libart;
+
 --19--
 
+SELECT nomfou, qte1*prix1*0.2 + qte2*prix2*0.2 + qte3*prix3*0.2, YEAR (derliv)
+FROM fournis 
+JOIN vente ON vente.numfou = fournis.numfou 
+JOIN produit ON produit.codart = vente.codart 
+JOIN ligcom ON ligcom.codart = produit.codart 
+WHERE YEAR (derliv) = 2018
+GROUP BY nomfou;
+
+--Fin--

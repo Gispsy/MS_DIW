@@ -29,7 +29,7 @@ let valeur = 0;
 
 function Exo1(){
 
- while (valeur <=100){
+ while (valeur < 100){
     valeur = window.prompt("entrer un age XD");
 
         if(valeur<=20){
