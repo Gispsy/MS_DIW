@@ -12,6 +12,7 @@ let p = window.prompt("Entrer un prénom");
          tab.push("  ")                                 //Push un élément vide a la fin de la chaine
          console.log('Element found');
          console.log(tab);
+         alert ("GG tu la suprimer de la liste")
          break;
 
      }else{
@@ -24,7 +25,6 @@ let p = window.prompt("Entrer un prénom");
  
  };
  document.write ("Il reste dans le tableau " + tab);
- alert ("GG tu la suprimer de la liste");
 }
 
 
