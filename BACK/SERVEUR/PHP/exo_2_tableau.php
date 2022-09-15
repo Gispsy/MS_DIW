@@ -62,18 +62,24 @@
         "Vilnius" => "Lituanie",
         "Zagreb" => "Croatie"
     );
+//----------Trie des pays (ordre alphabétique) avec leurs capitales-----------------------//
 
-        asort($capitales);
-        // asort($valeur);
-        $Nombre = count($capitales);  
-        echo$Nombre;
-       
+        // asort($capitales);
 
-    for($L = 0; $L = $capitales; $L++){
-        foreach($capitales as $cle => $valeur){
-            echo"<tr><th>".$cle."</th><td>".$valeur."</td></tr>";
-        }
-        
+//--------------------------------------------------------------------------------//   
+        ksort($capitales);                      // tri des capitales (ordre alphabétique)
+
+        $Nombre = count($capitales);            // Compteur de pays dans le tableau
+        echo"Il y a ".$Nombre." pays";                            // Affiche le nombre de pays 
+        $pattern = '(\bB[a-z]+)';
+
+        foreach($capitales as $capital => $pays){
+            $capital = preg_replace($pattern, "   ",$capital);          //regex qui va remplacer les captiale commencent par B par du vide "  " preg_replace($pattern, "   ",$capital);          //regex qui va remplacer les captiale commencent par B par du vide "  "
+            echo"<tr><th>".$pays."</th><td>".$capital."</td></tr>";
     }
+    
+
+
+    
 
 ?>
