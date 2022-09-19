@@ -1,19 +1,12 @@
 <html>
-
+    <body>
 <!-- Lien a afficher grace a une fonction php  -->
     <?php 
-        function liens($L){
+       function newliens($Nliens,$titre){
+            echo"<a href = ".$Nliens.">".$titre."</a>";
+       }
+       newliens("https://www.reddit.com/","Reddit Hug");
+       ?>
+        
 
-            $L = htmlentitties("https://www.reddit.com/", "Reddit Hug");
-
-        };
-        liens($L);
-    ?>
-
-
-<!-- Somme de valeur d'un tableau avec fonction php -->
-
-<?php 
-//  $tab = array(4, 3, 8, 2);
-//  $resultat = somme($tab);
-?> 
+</body>
