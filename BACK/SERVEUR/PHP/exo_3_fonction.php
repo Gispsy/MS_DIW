@@ -1,20 +1,28 @@
 <html>
     <body>
         <?php
-            function verif(){
-                $resultat = complex_password("TopSecret42");
-                if($resultat = strlen($resultat < 8)){
-
-                    $resultat = true;
-                   
-
-                }if($resultat = strtoupper($resultat){
-
-                    $resultat = true ; 
-                    
-                }
-            };
-            verif();
+           function mdp(){
+            $resultat = ("TopSecret42");
+            if(strlen($resultat) >= 8){
+                true;
+                echo'let';
+            }if(strtolower($resultat)){
+                true;
+                echo"'s";
+            }if(strtoupper($resultat)){
+                true;
+                echo' go';
+            }if(ctype_digit($resultat)){
+                $resultat = false;
+                echo' nul';
+                echo"<br>".$resultat;
+            }else{
+                $resultat = true;
+                echo' juste';
+                echo'<br>'.$resultat;
+            }
+           }
+           mdp();
         ?>
     </body>
 </html>
