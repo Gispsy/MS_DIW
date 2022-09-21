@@ -60,7 +60,19 @@
         <p>phase 6</p>
         <?php
             $ndate = new DateTime();
+            $ndate -> add(new DateInterval('P1M'));
             echo $ndate->format("d/m/Y");
+        ?>
+        <br>
+        ------------------------------------------------------------------------------------------------------------------
+        <br>
+        <p>phase 7</p>
+        <?php
+            $dote2 = new DateTimeImmutable();
+            $dote = "1000200000";
+            $dote2 -> setTimestamp($dote);
+            echo$dote2->format('d-m-Y H:i:s');
+
         ?>
 
     </body>
