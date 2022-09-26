@@ -4,7 +4,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     </head>
     <body>
-        <table class="table table-dark table-striped">
+        <table class="table table-dark table-striped table-bordered border-primary"">
             <?php
                 $fp = file('employe.csv');?>
                 <?php foreach($fp as $ligne){?>
