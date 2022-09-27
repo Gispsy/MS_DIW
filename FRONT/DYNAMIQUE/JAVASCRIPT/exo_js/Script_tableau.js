@@ -165,6 +165,7 @@ InfoTab()
 
 
 //Tri a bulle
+
 let p;
 let v;
 let change = false;
@@ -174,6 +175,7 @@ function tri()
     for (p = 0; p <= Number(myTableau.length-1); p++)
     {
         change = false;
+
     for(v = 0; v <= (myTableau.length-1) ; v++)
     {    
         if( myTableau[v] > myTableau[v+1] )
@@ -190,6 +192,5 @@ function tri()
         }
     }
 }
-
-tri()
+tri();
 console.log(myTableau);
