@@ -7,15 +7,15 @@
 
     // on lance une requête pour chercher toutes les fiches d'artistes
     $requete = $db->query("SELECT * FROM artist");
-    
-    $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
-        var_dump($tableau);
     // on récupère tous les résultats trouvés dans une variable
     $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
+    // var_dump($tableau);
+
     // on clôt la requête en BDD
     $requete->closeCursor();
 
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -25,20 +25,21 @@
     <title>PDO - Liste</title>
 </head>
 <body>
-    <table>
+    <table border = "solid">
         <tr>
             <th>ID</th>
             <th>Nom</th>
+            <!-- Ici, on ajoute une colonne pour insérer un lien -->
+            <th></th>
         </tr>
 
         <?php foreach ($tableau as $artist): ?>
-
-        <?php var_dump($artist); // Le var_dump() est écrit à titre informatif ?>
         <tr>
             <td><?= $artist->artist_id ?></td>
             <td><?= $artist->artist_name ?></td>
+            <!-- Ici, on ajoute un lien par artiste pour accéder à sa fiche : -->
+            <td><a href="artist_detail.php?id=12<?= $artist->artist_id ?>">Détail</a></td>
         </tr>
-
         <?php endforeach; ?>
 
     </table>

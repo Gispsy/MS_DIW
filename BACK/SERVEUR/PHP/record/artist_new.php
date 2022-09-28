@@ -10,7 +10,7 @@
 
     <h1>Saisie d'un nouvel artiste</h1>
 
-    <a href="artist.php"><button>Retour à la liste des artistes</button></a>
+    <a href="artists.php"><button>Retour à la liste des artistes</button></a>
 
     <br>
     <br>
