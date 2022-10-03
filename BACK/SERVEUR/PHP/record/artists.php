@@ -38,7 +38,7 @@
             <td><?= $artist->artist_id ?></td>
             <td><?= $artist->artist_name ?></td>
             <!-- Ici, on ajoute un lien par artiste pour accéder à sa fiche : -->
-            <td><a href="artist_detail.php?id=12<?= $artist->artist_id ?>">Détail</a></td>
+            <td><a href="artist_detail.php?id=<?= $artist->artist_id ?>">Détail</a></td>
         </tr>
         <?php endforeach; ?>
 
