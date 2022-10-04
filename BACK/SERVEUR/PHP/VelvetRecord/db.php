@@ -11,6 +11,6 @@ function ConnexionDeBase() {
         echo "Erreur : " . $e->getMessage() . "<br>";
         echo "N° : " . $e->getCode();
         die(" Fin du script");
-    }
-}
+    };
+};
 ?>
