@@ -6,7 +6,8 @@
 
     $requete = $db->query("SELECT*FROM disc 
                                 INNER JOIN artist 
-                                    ON disc.artist_id = artist.artist_id");        //Requete pour trouver les discs
+                                    ON disc.artist_id = artist.artist_id
+                                    WHERE disc.disc_id");        //Requete pour trouver les discs
     $tableau = $requete-> fetchall(PDO::FETCH_OBJ);     //Recupere les valeurs dans une variable
 
     $requete->closeCursor();                            //Ferme inclusion de db.php
@@ -24,7 +25,7 @@
     </head>
     <body>
         <h1> Liste des disques </h1>
-        <p class="position-absolute top-0 end-0 btn btn-primary">Ajouter</p>
+        <a href="disc_new.php" class="btn btn-primary">Ajouter</a>
             <table>
                 <?php foreach ($tableau as $disc): ?>
                     <tr>
@@ -34,8 +35,8 @@
                         <td><b>Label : </b><?=$disc->disc_label?></td>
                         <td><b>Année : </b><?=$disc->disc_year?></td>
                         <td><b>Genre : </b><?=$disc->disc_genre?></td>
-                        <td><?=$disc -> artist_name?></td>
-                        <td><a href="disc_detail.php?id=<?= $artist->artist_id ?>"class="btn btn-primary">Détail</a></td>
+                        <td><?=$disc->artist_name?></td>
+                        <td><a href="disc_detail.php?id=<?=$disc->disc_id ?>" class="btn btn-primary">Détail</a></td>
 
                 </tr>
                 <?php endforeach?>      
