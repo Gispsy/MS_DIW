@@ -50,7 +50,7 @@
                     <p>Picture</p>
                     <td ><img src = 'jaquettes/<?=$myArtist -> disc_picture?>'alt = jaquette class="img-fluid img-thumbnail"></td><br>
                 </tr>
-               <button type="submit" class="btn btn-dark"><a href = 'disc_modifier.php'>Modifier</a></button>
+               <button type="submit" class="btn btn-dark"><a href="disc_modifier.php?id=<?=$myArtist->disc_id ?>">Modifier</a></button>
                 <button type="reset" class="btn btn-dark"><a href= 'discs.php'>supprimer</a></button>
             <button type="reset" class="btn btn-dark"><a href= 'discs.php'>Retour</a></button>
         </body>

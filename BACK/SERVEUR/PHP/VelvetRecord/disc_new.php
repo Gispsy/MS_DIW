@@ -19,17 +19,17 @@
         <body>
             <h1>Le Formulaire d'ajout</h1>
             <hr>
-            <form>
+            <form action ="script_disc_ajout.php" method = 'post'>
                 <h2>Ajouter un vinyle</h2>
                     <!-- Ajout de titre debut -->
-                    <label for = 'titre'>Title</label>
+                    <label for = 'Titre'>Title</label>
                     <input type = 'text' name = 'title' placeholder = 'Enter title'><br>
                     <br>
                     <!-- Ajout de titre fin -->
                     <!-- Début menu déroulant -->
-                    <label for = 'artist'>Artist</label>
+                    <label for = 'Artist'>Artist</label>
                     <select>
-                    <option value="" selected>Veuillez séléctionner un Artist</option>
+                    <option name ='artist' value="" selected>Veuillez séléctionner un Artist</option>
                         <?php foreach ($tableau as $artist):?>
                             <option>
                                 <?= $artist->artist_name?>
@@ -39,32 +39,32 @@
                     <br>
                     <!-- Fin menu déroulant -->
                     <!-- Ajout de l'année  -->
-                    <label for = 'year'>Year</label>
+                    <label for = 'Year'>Year</label>
                     <input type = 'text' name = 'year' placeholder = 'Entrer year'><br>
                     <br>
                     <!-- Fin ajout de l'année -->
                     <!-- Ajout du genre -->
-                    <label for = 'genre'>Genre</label>
+                    <label for = 'Genre'>Genre</label>
                     <input type = 'text' name = 'genre' placeholder = 'Entrer genre (Rock, Pop, Prog...)'><br>
                     <br>
                     <!-- Fin d'ajout du genre -->
                     <!-- Début d'ajout du label -->
-                    <label for = 'label'>Label</label>
+                    <label for = 'Label'>Label</label>
                     <input type = 'text' name = 'label' placeholder = 'Entrer label (EMI, Warner, PolyGram, Univers sale ...)'><br>
                     <br>
                     <!-- Fin ajout du label -->
                     <!-- Début ajout prix -->
-                    <label for = 'price'>Price</label>
+                    <label for = 'Price'>Price</label>
                     <input type = 'text' name = 'price'><br>
                     <br>
                     <!-- Fin ajout prix -->
                     <!-- Début ajout d'image -->
-                    <label for = 'picture'>Picture</label>
-                    <input type = 'file'><br>
+                    <label for = 'Picture'>Picture</label>
+                    <input type = 'file' name = 'picture'><br>
                     <br>
                     <!-- Fin ajout image -->
-                    <button type="submit" class="btn btn-dark">Ajouter</button>
-            <button type="reset" class="btn btn-dark"><a href= 'discs.php'>Retour</a></button>
+                    <button type="submit" class="btn btn-dark" value ="Ajouter">Ajouter</button>
+            <button type="reset" class="btn btn-dark"><a href= 'discs.php' value="100000">Retour</a></button>
             </form>
         </body>
     </html>

@@ -23,15 +23,48 @@
             <title>Details discs </title>
         </head>
         <body>
-            <form method = 'post'>
+            <form action ="script_disc_modif.php" method = 'post'>
                 <h1>Modifier un vinyle</h1>
+                <!-- debut titre -->
                 <label for = 'title'>Title</label>
-                <input type = "text" value = '<?=$mymodif->disc_title?>' name = 'title'></input>
-                <?=var_dump($mymodif -> disc_title)?> 
-                
+                <input type = "text" value = '<?=$mymodif->disc_title?>' name = 'title'></input><br><br>
+                <!-- Fin titre -->
+                <!-- <?=var_dump($mymodif -> disc_title)?>  -->
+                <!-- Debut artist -->
+                <label for = 'artist'>Artist</label>
+                <select>
+                    <option value="" selected>Veuillez séléctionner un Artist</option>
+                        <?php foreach ($mymodif as $artist):?>
+                            <option>
+                                <?= $artist->artist_name?>
+                            </option>
+                        <?php endforeach?>
+                    </select><br>
+                    <br>
+                <!-- Fin artist -->
+                <!-- Debut année  -->
+                <label for = 'year'>Year</label>
+                <input type = 'text' value = '<?=$mymodif->disc_year?>' name = 'year'></input><br><br>
+                <!-- Fin année -->
+                <!-- Debut genre -->
+                <label for = 'genre'>Genre</label>
+                <input type = 'text' value = '<?=$mymodif->disc_genre?>' name = 'genre'></input><br><br>
+                <!-- Fin genre -->
+                <!-- Debut label -->
+                <label for = 'label'>Label</label>
+                <input type = 'text' value = '<?=$mymodif->disc_label?>' name = 'label'></input><br><br>
+                <!-- Fin label -->
+                <!-- Debut prix -->
+                <label for = 'price'>Price</label>
+                <input type = 'text' value = '<?=$mymodif->disc_price?>' name = 'price'></input><br><br>
+                <!-- Fin prix -->
+                <!-- Debut image -->
+                <label for = 'picture'>Picture</label><br><br>
+                <input type = 'file'><br>
+                <td ><img src = 'jaquettes/<?=$mymodif -> disc_picture?>'alt = jaquette class="img-fluid img-thumbnail"></td><br>
 
-
-                <a href="disc_detail.php">Retour</a>
+                <button type="submit" class="btn btn-dark">Modifier</button>
+                <button type = 'submit'><a href="disc_detail.php?id=<?=$mymodif->disc_id ?>">Retour</a></button>
             </form>
         </body>
     </html>
