@@ -28,8 +28,8 @@
                     <!-- Ajout de titre fin -->
                     <!-- Début menu déroulant -->
                     <label for = 'Artist'>Artist</label>
-                    <select>
-                    <option name ='artist' value="" selected>Veuillez séléctionner un Artist</option>
+                    <select name = "artist">
+                    <option value="" selected>Veuillez séléctionner un Artist</option>
                         <?php foreach ($tableau as $artist):?>
                             <option>
                                 <?= $artist->artist_name?>

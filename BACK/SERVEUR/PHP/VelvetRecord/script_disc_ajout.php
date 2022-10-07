@@ -3,11 +3,12 @@
     //Recuperation du nouveau titre
 
     if (isset($_POST['title']) && $_POST['title'] != "") {
-        $titre = $_POST['title'];
+        $title = $_POST['title'];
     }
     else {
-        $titre = Null;
-    }
+        $title = Null;
+    };
+    // var_dump($_POST);
 
     //Fin de recuperation du titre
 
@@ -18,18 +19,20 @@
     }
     else {
         $artist = Null;
-    }
+    };
+    // var_dump($_POST);
 
     //Fin recuperation du nom de l'artist
 
     //Debut de recuperation de l'année
 
     if (isset($_POST['year']) && $_POST['year'] != "") {
-        $année = $_POST['year'];
+        $year = $_POST['year'];
     }
     else {
-        $année = Null;
-    }
+        $year = Null;
+    };
+    // var_dump($_POST);
 
     //Fin récuperation de l'année
 
@@ -40,7 +43,8 @@
     }
     else {
         $genre = Null;
-    }
+    };
+    // var_dump($_POST);
 
     //Fin récuperation du genre
 
@@ -51,7 +55,8 @@
     }
     else {
         $label = Null;
-    }
+    };
+    // var_dump($_POST);
     
     //Fin récuperation du label
 
@@ -62,32 +67,34 @@
     }
     else {
         $price = Null;
-    }
+    };
+    // var_dump($_POST);
 
     //Fin récuperation du prix
 
     //Début récuperation de l'image
 
     if (isset($_POST['picture']) && $_POST['picture'] != "") {
-        $image = $_POST['picture'];
+        $picture = $_POST['picture'];
     }
     else {
-        $image = Null;
-    }
+        $picture = Null;
+    };
+    // var_dump($_POST);
 
     //Fin de récuperation de l'image
 
     //Erreur renvoie au formulaire
 
-    if ($titre == Null || $artist == Null || $année == Null || $genre == NULL || $label == Null || $price == NULL || $image == Null) {
+    if ($title == Null || $artist == Null || $year == Null || $genre == NULL || $label == Null || $price == NULL || $picture == Null) {
         header("Location: disc_new.php");
         exit;
-    }
+    };
 
     //Connexion a la base de donnée 
 
     require "db.php"; 
-    $db = connexionBase();
+    $db = connexionDeBase();
 
     //Debut de la requete pour avoir les données dans la BDD
 
@@ -111,7 +118,7 @@
         //Debut requete pour artist
         $requete_2 = $db -> prepare("INSERT INTO artist (artist_name)VALUE (:artist)");
 
-        $requete_2->blindValue(":artist", $artist, PDO::PARAM_STR);
+        $requete_2->bindValue(":artist", $artist, PDO::PARAM_STR);
 
         $requete_2 -> execute();
         $requete_2 -> closeCursor();
@@ -124,7 +131,7 @@
 
         echo"Erreur : ".$requete->errorInfo();
         die("Fin du script (script_disc_ajout.php)");
-    }
+    };
 
     //Fin de la requete avec erreur ou cas ou il y a une erreur dans l'ajout
 
