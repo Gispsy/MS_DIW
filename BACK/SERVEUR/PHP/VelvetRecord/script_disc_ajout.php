@@ -14,12 +14,12 @@
 
     //Recuperation du nom de l'artist
 
-    if (isset($_POST['artist']) && $_POST['artist'] != "") {
-        $artist = $_POST['artist'];
-    }
-    else {
-        $artist = Null;
-    };
+    // if (isset($_POST['artist']) && $_POST['artist'] != "") {
+    //     $artist = $_POST['artist'];
+    // }
+    // else {
+    //     $artist = Null;
+    // };
     // var_dump($_POST);
 
     //Fin recuperation du nom de l'artist
@@ -80,13 +80,25 @@
     else {
         $picture = Null;
     };
+
+    //Début recuperation id
+
+    if (isset($_POST['artist']) && $_POST['artist'] != "") {
+        $id = $_POST['artist'];
+    }
+    else {
+        $id = Null;
+    };
+
+    //Fin recuperation id
+
     // var_dump($_POST);
 
     //Fin de récuperation de l'image
 
     //Erreur renvoie au formulaire
 
-    if ($title == Null || $artist == Null || $year == Null || $genre == NULL || $label == Null || $price == NULL || $picture == Null) {
+    if ($title == Null || $year == Null || $genre == NULL || $label == Null || $price == NULL || $picture == Null || $id == Null) {
         header("Location: disc_new.php");
         exit;
     };
@@ -102,7 +114,7 @@
 
     try{
         
-        $requete = $db -> prepare("INSERT INTO disc (disc_title, disc_year, disc_genre, disc_label, disc_price, disc_picture)VALUE (:title, :year, :genre, :label, :price, :picture);");
+        $requete = $db -> prepare("INSERT INTO disc (disc_title, disc_year, disc_genre, disc_label, disc_price, disc_picture, artist_id)VALUE (:title, :year, :genre, :label, :price, :picture, :id);");
 
         $requete->bindValue(":title", $title, PDO::PARAM_STR);
         $requete->bindValue(":year", $year, PDO::PARAM_STR);
@@ -110,18 +122,19 @@
         $requete->bindValue(":label", $label, PDO::PARAM_STR);
         $requete->bindValue(":price", $price, PDO::PARAM_STR);
         $requete->bindValue(":picture", $picture, PDO::PARAM_STR);
+        $requete->bindValue(":id", $id, PDO::PARAM_STR);
 
         $requete -> execute();
         $requete-> closeCursor();
         
         //Fin requete pour disc
         //Debut requete pour artist
-        $requete_2 = $db -> prepare("INSERT INTO artist (artist_name)VALUE (:artist)");
+        // $requete_2 = $db -> prepare("INSERT INTO artist (artist_name)VALUE (:artist)");
 
-        $requete_2->bindValue(":artist", $artist, PDO::PARAM_STR);
+        // $requete_2->bindValue(":artist", $artist, PDO::PARAM_STR);
 
-        $requete_2 -> execute();
-        $requete_2 -> closeCursor();
+        // $requete_2 -> execute();
+        // $requete_2 -> closeCursor();
 
         //Fin requete pour artist
 

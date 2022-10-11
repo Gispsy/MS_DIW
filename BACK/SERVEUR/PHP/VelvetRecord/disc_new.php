@@ -29,9 +29,9 @@
                     <!-- Début menu déroulant -->
                     <label for = 'Artist'>Artist</label>
                     <select name = "artist">
-                    <option value="" selected>Veuillez séléctionner un Artist</option>
-                        <?php foreach ($tableau as $artist):?>
-                            <option>
+                    <option selected>Veuillez séléctionner un Artist</option>
+                        <?php  foreach ($tableau as $artist):?>
+                            <option value = <?= $artist->artist_id ?>>
                                 <?= $artist->artist_name?>
                             </option>
                         <?php endforeach?>

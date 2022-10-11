@@ -36,19 +36,19 @@
             ?>
                 <tr>
                     <p>Title</p>
-                    <td><?=$myArtist->disc_title?></td>
+                    <td name = "title"><?=$myArtist->disc_title?></td>
                     <p>Artist</p>
-                    <td><?=$myArtist->artist_name?></td>
+                    <td name = "name"><?=$myArtist->artist_name?></td>
                     <p>Year</p>
-                    <td><?=$myArtist->disc_year?></td>
+                    <td name = "year"><?=$myArtist->disc_year?></td>
                     <p>Genre</p>
-                    <td><?=$myArtist->disc_genre?></td>
+                    <td name = "genre"><?=$myArtist->disc_genre?></td>
                     <p>Label</p>
-                    <td><?=$myArtist->disc_label?></td>
+                    <td name = "label"><?=$myArtist->disc_label?></td>
                     <p>Price</p>
-                    <td><?=$myArtist->disc_price?></td>
+                    <td name = "price"><?=$myArtist->disc_price?></td>
                     <p>Picture</p>
-                    <td ><img src = 'jaquettes/<?=$myArtist -> disc_picture?>'alt = jaquette class="img-fluid img-thumbnail"></td><br>
+                    <td name = "picture"><img src = 'jaquettes/<?=$myArtist -> disc_picture?>'alt = jaquette class="img-fluid img-thumbnail"></td><br>
                 </tr>
                <button type="submit" class="btn btn-dark"><a href="disc_modifier.php?id=<?=$myArtist->disc_id ?>">Modifier</a></button>
                 <button type="reset" class="btn btn-dark"><a href= 'discs.php'>supprimer</a></button>

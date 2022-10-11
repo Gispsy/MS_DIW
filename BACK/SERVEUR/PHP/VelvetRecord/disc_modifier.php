@@ -14,6 +14,11 @@
 
     $requete->closeCursor();                            //Ferme inclusion de db.php
 
+    $requete_2 = $db->query("SELECT*FROM artist");
+    $tableau = $requete_2-> fetchall(PDO::FETCH_OBJ); 
+
+    $requete_2->closeCursor();
+
 ?>
 <DOCTYPE html>
     <html lang = 'fr'>
@@ -25,18 +30,19 @@
         <body>
             <form action ="script_disc_modif.php" method = 'post'>
                 <h1>Modifier un vinyle</h1>
+                <input type = 'hidden'value ='<?=$mymodif->disc_id?>' name = 'id'></input>
                 <!-- debut titre -->
-                <label for = 'title'>Title</label>
+                <label for = 'Title'>Title</label>
                 <input type = "text" value = '<?=$mymodif->disc_title?>' name = 'title'></input><br><br>
                 <!-- Fin titre -->
                 <!-- <?=var_dump($mymodif -> disc_title)?>  -->
                 <!-- Debut artist -->
-                <label for = 'artist'>Artist</label>
+                <label for = 'Artist'>Artist</label>
                 <select name = 'artist'>
-                    <option><?=$mymodif -> artist_name?></option>
-                        <?php foreach ($mymodif as $artist):?>
-                            <option>
-                                <?=var_dump($artist -> artist_name);?>
+                    <option value = <?= $mymodif->artist_id?>><?=$mymodif -> artist_name?></option>
+                        <?php foreach ($tableau as $artist):?>
+                            <option value = <?= $artist->artist_id?>>
+                                <!-- <?=var_dump($artist -> artist_name);?> -->
                                 <?=$artist -> artist_name?>
                             </option>
                         <?php endforeach?>
@@ -44,24 +50,24 @@
                     <br>
                 <!-- Fin artist -->
                 <!-- Debut année  -->
-                <label for = 'year'>Year</label>
+                <label for = 'Year'>Year</label>
                 <input type = 'text' value = '<?=$mymodif->disc_year?>' name = 'year'></input><br><br>
                 <!-- Fin année -->
                 <!-- Debut genre -->
-                <label for = 'genre'>Genre</label>
+                <label for = 'Genre'>Genre</label>
                 <input type = 'text' value = '<?=$mymodif->disc_genre?>' name = 'genre'></input><br><br>
                 <!-- Fin genre -->
                 <!-- Debut label -->
-                <label for = 'label'>Label</label>
+                <label for = 'Label'>Label</label>
                 <input type = 'text' value = '<?=$mymodif->disc_label?>' name = 'label'></input><br><br>
                 <!-- Fin label -->
                 <!-- Debut prix -->
-                <label for = 'price'>Price</label>
+                <label for = 'Price'>Price</label>
                 <input type = 'text' value = '<?=$mymodif->disc_price?>' name = 'price'></input><br><br>
                 <!-- Fin prix -->
                 <!-- Debut image -->
-                <label for = 'picture'>Picture</label><br><br>
-                <input type = 'file'><br>
+                <label for = 'Picture'>Picture</label><br><br>
+                <input type = 'file' name = 'picture'><br>
                 <td ><img src = 'jaquettes/<?=$mymodif -> disc_picture?>'alt = jaquette class="img-fluid img-thumbnail"></td><br>
 
                 <button type="submit" class="btn btn-dark">Modifier</button>
