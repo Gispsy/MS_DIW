@@ -1,42 +1,31 @@
-<?php  
+<?php include('connexion_discs.php')?>
 
-    include "db.php";                                   //Inclu la base de donnée de db.php
-
-    $db = ConnexionDeBase();                            //Connexion a la base de donnée
-
-    $requete = $db->query("SELECT*FROM disc 
-                                INNER JOIN artist 
-                                    ON disc.artist_id = artist.artist_id
-                                    WHERE disc.disc_id");        //Requete pour trouver les discs
-    $tableau = $requete-> fetchall(PDO::FETCH_OBJ);     //Recupere les valeurs dans une variable
-
-    $requete->closeCursor();                            //Ferme inclusion de db.php
-
-?>
-
-<!DOCTYPE html>
-<html lang = "fr">
-    <head>
-        <meta charset = "utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php include('header.php')?>
         <title> Disc </title>
     </head>
     <body>
         <h1> Liste des disques </h1>
-        <a href="disc_new.php" class="btn btn-primary">Ajouter</a>
+        <a href="disc_new.php" class="btn btn-primary float-end">Ajouter</a>
             <table>
                 <?php foreach ($tableau as $disc): ?>
-                    <tr>
+                    <tr><div  class='row'>
 
-                        <td ><img src = 'jaquettes/<?=$disc -> disc_picture?>'alt = jaquette class="img-fluid img-thumbnail"></td>
-                        <td><?=$disc -> disc_title?></td>
-                        <td><b>Label : </b><?=$disc->disc_label?></td>
-                        <td><b>Année : </b><?=$disc->disc_year?></td>
-                        <td><b>Genre : </b><?=$disc->disc_genre?></td>
-                        <td><?=$disc->artist_name?></td>
-                        <td><a href="disc_detail.php?id=<?=$disc->disc_id ?>" class="btn btn-primary">Détail</a></td>
+                    <div class="col-6">
 
-                </tr>
+                        <td ><img src = 'jaquettes/<?=$disc -> disc_picture?>'alt = jaquette class="img-fluid rounded float-start"></td>
+
+                    </div>
+
+                        <div>
+                            <td class="form-control"><?=$disc -> disc_title?></td>
+                            <td class="form-control"><b>Label : </b><?=$disc->disc_label?></td>
+                            <td class="form-control"><b>Année : </b><?=$disc->disc_year?></td>
+                            <td class="form-control"><b>Genre : </b><?=$disc->disc_genre?></td>
+                            <td class="form-control"><?=$disc->artist_name?></td>
+                            <td class="form-control"><a href="disc_detail.php?id=<?=$disc->disc_id ?>" class="btn btn-primary">Détail</a></td>
+                        </div>
+
+                </tr></div>
                 <?php endforeach?>      
     </body>
 </html>
