@@ -4,28 +4,43 @@
         <title> Disc </title>
     </head>
     <body>
-        <h1> Liste des disques </h1>
-        <a href="disc_new.php" class="btn btn-primary float-end">Ajouter</a>
-            <table>
-                <?php foreach ($tableau as $disc): ?>
-                    <tr><div  class='row'>
+        <div class = "row justify-content-center">
+            <div class="col-4 m-3">
+                <h1> Liste des disques </h1>
+            </div>
+            <div class = "col-4 m-3">
+                <a href = "disc_new.php" class="btn btn-primary float-end">Ajouter</a>
+            </div>
+        </div>
 
-                    <div class="col-6">
+                    <?php foreach ($tableau as $disc): ?>                   <!--creer le tableau via base de données-->
+                        <!-- <div class = "row d-flex justify-content mt-8">      div du total -->
+                        <div class="col-12">
+                            <div class = "card w-25 m-5 float-start">
+                                    <div class = "card-head h-100">                  <!--tete de l'affiche-->
+                                        <img src = 'jaquettes/<?=$disc -> disc_picture?>'alt = jaquette class = "card-img-top">
+                                    </div>                                      <!--fin tete d'affiche-->
+                        <div class = "card text-center">
 
-                        <td ><img src = 'jaquettes/<?=$disc -> disc_picture?>'alt = jaquette class="img-fluid rounded float-start"></td>
+                                        <div class = "card-body">                 <!--body de l'affiche-->
 
+                                            <div class = "card-title h2"><?=$disc -> disc_title?></div>
+                                        
+                                            <div class = "card-title h5">Label : <?=$disc -> disc_label?></div>
+                    
+                                            <div class = "card-text-truncate h6">Année : <?=$disc -> disc_year?></div>
+                                        
+                                            <div class = "card-text-truncate h6">Genre : <?=$disc -> disc_genre?></div>
+                                        
+                                            <div class = "card-text-truncate h6"><?=$disc -> artist_name?></div>
+
+                                            <div><a href = "disc_detail.php?id=<?=$disc -> disc_id ?>" class="btn btn-primary">Détail</a></div>
+
+                                        </div>                                  <!--Fin body de l'affiche-->
+                            </div>
+                        </div>                                                      <!-- div du total-->
                     </div>
-
-                        <div>
-                            <td class="form-control"><?=$disc -> disc_title?></td>
-                            <td class="form-control"><b>Label : </b><?=$disc->disc_label?></td>
-                            <td class="form-control"><b>Année : </b><?=$disc->disc_year?></td>
-                            <td class="form-control"><b>Genre : </b><?=$disc->disc_genre?></td>
-                            <td class="form-control"><?=$disc->artist_name?></td>
-                            <td class="form-control"><a href="disc_detail.php?id=<?=$disc->disc_id ?>" class="btn btn-primary">Détail</a></td>
-                        </div>
-
-                </tr></div>
-                <?php endforeach?>      
+                <?php endforeach?>  
+<?php include('footer.php') ?> 
     </body>
 </html>
