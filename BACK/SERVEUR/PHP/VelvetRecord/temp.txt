@@ -1,0 +1,25 @@
+<div class="card mb-3 border-0" style="max-width: 540px;">    
+                            <div class = "row g-0">
+                                    <div class = "col-md-5">                  <!--tete de l'affiche-->
+                                        <img src = 'jaquettes/<?=$disc ->disc_picture?>'alt = jaquette class = "img-fluid rounded">
+                                    </div>                                      <!--fin tete d'affiche-->
+                                <div class = "col-md-7">
+
+                                        <div class = "card border-0">                 <!--body de l'affiche-->
+
+                                            <div class = "card-title h3 mx-2"><?=$disc -> disc_title?></div>
+                                        
+                                            <div class = "card-title h6 mx-2">Label : <?=$disc -> disc_label?></div>
+                    
+                                            <div class = "card-text h6 mx-2">Année : <?=$disc -> disc_year?></div>
+                                        
+                                            <div class = "card-text h6 mx-2">Genre : <?=$disc -> disc_genre?></div>
+                                        
+                                            <div class = "card-text h6 mx-2"><?=$disc -> artist_name?></div>
+
+                                            <div><a href = "disc_detail.php?id=<?=$disc -> disc_id ?>" class="btn btn-primary mx-2">Détail</a></div>
+
+                                        </div>                                  <!--Fin body de l'affiche-->
+                                </div>
+                            </div>
+                        </div>  
