@@ -1,4 +1,7 @@
 <?php
+
+//Connexion a une session
+
 session_start();
 
 $_SESSION["login"] = "webmaster";
@@ -35,9 +38,12 @@ echo $_SESSION["login"]; ?>
      }
  
      // Reste du code (PHP/HTML)
-     echo"Bonjour ".$_SESSION["login"]."<br>");  ?>
+     echo"Bonjour ".$_SESSION["login"]."<br>";  ?>
 
 <?php
+
+//Detruire une session
+
     unset($_SESSION["login"]);
     unset($_SESSION["role"]);
 

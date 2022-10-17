@@ -18,8 +18,12 @@
     <div class="card">
       <img src="<?= "jaquettes/". $disc->disc_picture ?>" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title"><?=$disc -> disc_title?></h5>
+        <h6 class="card-title"><?=$disc -> disc_label?></h6>
+        <p class="card-text"><?=$disc -> disc_year?></p>
+        <p class="card-text"><?=$disc -> disc_genre?></p>
+        <p class="card-text"><?=$disc -> artist_name?></p>
+        <p class="card-text"><a href = "disc_detail.php?id=<?=$disc -> disc_id ?>" class="btn btn-primary mx-2">Détail</a></p>
       </div>
     </div>
   </div>                                                   <!-- div du total-->
