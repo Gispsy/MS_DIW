@@ -1,21 +1,37 @@
 <?php 
+    session_start();
+    session_regenerate_id();
+    var_dump($_POST['log']);
+    var_dump($_POST['mdp']);
 
-    $log = $_POST["login"];
+    if (isset($_POST['log']) && $_POST['log'] != "") {
+        $login = $_POST['log'];
+    }
+    else {
+        $login = Null;
+    }
+    var_dump($login);
 
-    $_SESSION["login"] = $log;
-    $_SESSION["mdp"] = "webmaster";
+    $mdp = isset($_POST["mdp"]);
+    var_dump($mdp);
 
-    echo$_SESSION["login"];
+    $_SESSION["log"] = $login;
+    $_SESSION["mdp"] = $mdp;
+
+    echo$_SESSION["log"];
     echo$_SESSION["mdp"];
     var_dump($_SESSION);
 
     // echo session_id();
-    if(isset($_SESSION["login"]) && (isset($_SESSION["mdp"]))){
+    if(isset($_SESSION["log"]) && (isset($_SESSION["mdp"]))){
 
-        echo"ton identifiant est : ".$_SESSION["login"];
+        echo"ton identifiant est : ".$_SESSION["log"];
+        $auth = "ok";
+        echo$auth;
     }else {
 
         echo "Entre ton login";
+        $auth = "suuu";
         session_unset();
         session_destroy();
     }
