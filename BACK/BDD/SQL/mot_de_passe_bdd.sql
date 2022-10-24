@@ -5,7 +5,7 @@ CREATE SCHEMA IF NOT EXISTS testmdp;
 USE testmdp;
 
 CREATE TABLE `user` (
-    `artist_id`	INT PRIMARY KEY AUTO_INCREMENT,
-    `mdp` int NOT NULL,
-    `identifiant` int NOT NULL
+    `mdp` varchar(60) NOT NULL,
+    `identifiant` varchar(12) NOT NULL,
+    `artist_id`	int PRIMARY KEY AUTO_INCREMENT
 );

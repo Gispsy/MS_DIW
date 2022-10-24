@@ -14,7 +14,7 @@
                     <label for ="identifiant">Identifiant</label>
                     <input type ="text" name ="identifiant"></input><br><br>
                     <label for ="mdp">Mot de passe</label>
-                    <input type ="text" name="mdp"></input><br><br>
+                    <input type ="password" name="mdp"></input><br><br>
                     <input type ="submit"></input>
                     <input type ="reset"></input>
             </fieldset>

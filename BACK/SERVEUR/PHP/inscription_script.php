@@ -25,6 +25,8 @@
         exit;
     };
 
+    $hash = password_hash($mdp, PASSWORD_BCRYPT);
+
     //Connexion base de donnée
 
     require "db_ins.php"; 
@@ -34,15 +36,17 @@
 
         try{
         
-            $requete = $db -> prepare("INSERT INTO user (user_mdp, user_identifiant)VALUE (:mdp, :identifiant);");
+            $requete = $db -> prepare("INSERT INTO user (mdp, identifiant)VALUE (:mdp, :identifiant);");
 
-            $requete->bindValue(":mdp", $mdp, PDO::PARAM_STR);
+            $requete->bindValue(":mdp", $hash, PDO::PARAM_STR);
             $requete->bindValue(":identifiant", $identifiant, PDO::PARAM_STR);
 
             $requete -> execute();
             $requete-> closeCursor();
 
         }catch(Exception $e){
+            var_dump($requete->errorInfo());
+            // var_dump($db);
             // var_dump($requete);
             // var_dump($mdp);
             // var_dump($identifiant);
