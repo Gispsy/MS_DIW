@@ -1,6 +1,7 @@
 <?php
 class Animal
 {
+    
     public $espece;
     private $taille;
     private $poids;
