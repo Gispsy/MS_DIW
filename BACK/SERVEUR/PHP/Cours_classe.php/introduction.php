@@ -7,8 +7,8 @@ abstract class Humain
     public  $prenom;
     protected $age;
 
-    public function __construct($prenom, $nom, $age){           //Construction 
-
+    public function __construct($prenom, $nom, $age)
+    {                                                           //Construction 
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->setAge($age);
@@ -16,8 +16,8 @@ abstract class Humain
     
     abstract public function travailler();
 
-    public function setAge($age){
-
+    public function setAge($age)
+    {
         if(is_int($age) && $age >=1 && $age <= 120){                        //aide a obliger a metre un entier entre 1 et 120
         $this->age = $age;
         } else {
@@ -96,7 +96,8 @@ faireTravailler($employe1);
 faireTravailler($patron);
 faireTravailler($etudiant);
 
-function faireTravailler(Humain $objet){
+function faireTravailler(Humain $objet)
+{
 
     var_dump("Travail, cours : {$objet->travailler()}");
 

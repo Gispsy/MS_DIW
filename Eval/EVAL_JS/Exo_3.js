@@ -4,8 +4,8 @@
 
 function Exo_3(){
 let p = window.prompt("Entrer un prénom"); 
- for (let i=0; i <= tab.length; i--){                   //Boucle pour entrer tout les prénoms 
-             //Entrer le nom avec majuscule
+ for (let i=0; i <= tab.length; i--){            
+                                                        //Entrer le nom avec majuscule
      if(tab.indexOf(p)!== -1){                          //Condition de la selection des prénoms    
          console.log(tab[p]);
          tab.splice(tab.indexOf(p),1);                  //Split qui va découper la chaine selon le caractére 
