@@ -25,7 +25,7 @@ abstract class Humain
         }
     }
 
-    public function gatAge(){
+    public function getAge(){
 
         return $this->age;
 
