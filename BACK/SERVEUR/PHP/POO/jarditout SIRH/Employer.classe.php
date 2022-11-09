@@ -209,7 +209,7 @@ $e_4->cheque_vacance();
 $e_4->Nbenfant();
 $e_4->Cheque_Noel();
 
-$e_5 = new Employer("Menui", "Axel", "2018-04-24", "Logisticien", 27491, "Logistique",2, new Magasin("Jardipartout", "25 rue lamouise", "65000", "aparid","resto"), new Enfant('5')); 
+$e_5 = new Employer("Menui", "Axel", "2018-04-24", "Logisticien", 27491, "Logistique",1, new Magasin("Jardipartout", "25 rue lamouise", "65000", "aparid","resto"), new Enfant('5')); 
 $e_5->__Date();
 $e_5->Prime();
 $e_5->Mag();
