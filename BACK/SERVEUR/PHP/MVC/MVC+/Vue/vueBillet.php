@@ -1,4 +1,4 @@
-<?php require 'billet.php';?>
+<?php require_once 'controller/Controleur.php';?>
 
 <?php ob_start(); ?>
 <?php $titre = "Mon Blog - ".$billet['titre']; ?>
