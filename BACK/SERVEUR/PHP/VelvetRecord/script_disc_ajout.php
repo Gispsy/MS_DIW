@@ -106,7 +106,7 @@
     //Connexion a la base de donnée 
 
     require "db.php"; 
-    $db = connexionDeBase();
+    $db = ConnexionBase();
 
     //Debut de la requete pour avoir les données dans la BDD
 

@@ -2,7 +2,7 @@
 
     require "db.php";                                   //Inclu la base de donnée de db.php
 
-    $db = ConnexionDeBase();                            //Connexion a la base de donnée
+    $db = ConnexionBase();                            //Connexion a la base de donnée
     $id = $_GET["id"];                                  //récupére l'id
     $requete = $db->prepare("SELECT*FROM disc 
                                     JOIN artist 

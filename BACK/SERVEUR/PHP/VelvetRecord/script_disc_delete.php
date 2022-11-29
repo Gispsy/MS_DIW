@@ -7,7 +7,7 @@ if (!(isset($_GET['id'])) || intval($_GET['id']) <= 0) GOTO TrtRedirection;
 //Connexion base de données 
 
 require "db.php";
-$db = connexionBase();
+$db = ConnexionBase();
 
 //Requete pour supprimer de la liste
 

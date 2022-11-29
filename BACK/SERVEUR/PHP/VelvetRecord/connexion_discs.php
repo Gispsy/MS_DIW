@@ -2,7 +2,7 @@
 
     include "db.php";                                   //Inclu la base de donnée de db.php
 
-    $db = ConnexionDeBase();                            //Connexion a la base de donnée
+    $db = ConnexionBase();                            //Connexion a la base de donnée
 
     $requete = $db->query("SELECT*FROM disc 
                                 INNER JOIN artist 

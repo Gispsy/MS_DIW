@@ -91,7 +91,7 @@ else {
 
 //Connexion a la base de donnée
 require "db.php"; 
-$db = connexionDeBase();
+$db = ConnexionBase();
 
 try{
     //Debut de la requete pour un update 
